@@ -15,7 +15,7 @@
                 <img class="picture" title="<%= curiosity.image_text %>" alt="<%= curiosity.image_text %>" src="<%= curiosity.image_url %>"></img>
               </a>
             </div>
-            <%= link_to 'Supprimer', curiosity_path(curiosity), method: :delete %>
+            <%= link_to 'Supprimer', curiosity_path(curiosity), method: :delete, data: { confirm: 'Etes vous sûr(e)s de vouloir supprimer cette curiosité? ' } %>
             <h3><%= curiosity.name %></h3>
             <p><em><%= curiosity.category %></em></p>
             <p><%= curiosity.description %></p>
